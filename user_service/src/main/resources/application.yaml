@@ -4,7 +4,7 @@ spring:
   datasource:
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
-    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/finance_db}
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/finance_db_ms}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:

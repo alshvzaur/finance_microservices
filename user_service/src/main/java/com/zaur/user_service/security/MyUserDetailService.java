@@ -1,6 +1,5 @@
 package com.zaur.user_service.security;
 
-import ch.qos.logback.core.boolex.EvaluationException;
 import com.zaur.user_service.model.User;
 import com.zaur.user_service.repository.UserRepository;
 import lombok.AccessLevel;

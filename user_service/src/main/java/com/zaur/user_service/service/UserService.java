@@ -3,7 +3,7 @@ package com.zaur.user_service.service;
 import com.zaur.user_service.dto.AuthResponse;
 import com.zaur.user_service.dto.LoginRequest;
 import com.zaur.user_service.dto.RegisterRequest;
-import com.zaur.user_service.execption.UserAlreadyExistsException;
+import com.zaur.user_service.exception.UserAlreadyExistsException;
 import com.zaur.user_service.model.Role;
 import com.zaur.user_service.model.User;
 import com.zaur.user_service.repository.UserRepository;
@@ -29,7 +29,7 @@ public class UserService {
     JwtUtil jwtUtil;
     AuthenticationManager authenticationManager;
 
-    public AuthResponse saveUser(RegisterRequest registerRequest) throws UserAlreadyExistsException {
+    public AuthResponse saveUser(RegisterRequest registerRequest) {
 
         if (userRepository.existsByEmail(registerRequest.getEmail()) || userRepository.existsByUsername(registerRequest.getUsername())){
             throw new UserAlreadyExistsException("User Already Exists");
